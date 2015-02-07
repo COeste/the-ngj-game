@@ -81,11 +81,12 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 494010795}
-  - 20: {fileID: 494010794}
+  - 224: {fileID: 494010797}
   - 92: {fileID: 494010793}
   - 124: {fileID: 494010792}
   - 81: {fileID: 494010791}
+  - 222: {fileID: 494010796}
+  - 20: {fileID: 494010794}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -146,8 +147,14 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
---- !u!4 &494010795
-Transform:
+--- !u!222 &494010796
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 494010790}
+--- !u!224 &494010797
+RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -157,7 +164,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: .5, y: .5}
 --- !u!1 &564237783
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +221,7 @@ Transform:
   m_LocalScale: {x: 100, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
 --- !u!61 &564237786
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -275,7 +287,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5067908, guid: f1935163d2753af4c9bf8dafc0d3c637, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11467908, guid: f1935163d2753af4c9bf8dafc0d3c637, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f1935163d2753af4c9bf8dafc0d3c637, type: 2}
   m_RootGameObject: {fileID: 1995812413}
   m_IsPrefabParent: 0
@@ -341,7 +358,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &1435197376
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,9 +366,10 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1435197379}
-  - 212: {fileID: 1435197378}
+  - 224: {fileID: 1435197381}
   - 61: {fileID: 1435197377}
+  - 222: {fileID: 1435197380}
+  - 212: {fileID: 1435197378}
   m_Layer: 0
   m_Name: Desk
   m_TagString: Untagged
@@ -392,18 +410,29 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!4 &1435197379
-Transform:
+--- !u!222 &1435197380
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1435197376}
+--- !u!224 &1435197381
+RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1435197376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.930000007, y: .829999983, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -.930000007, y: .829999983}
+  m_SizeDelta: {x: .159999996, y: .159999996}
+  m_Pivot: {x: .5, y: .5}
 --- !u!1 &1995812413
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,18 +455,14 @@ GameObject:
 --- !u!114 &1995812414
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11467908, guid: f1935163d2753af4c9bf8dafc0d3c637,
-    type: 2}
-  m_PrefabInternal: {fileID: 1250765313}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1995812413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55e59c7a1c2988940b9d289fbd9fd270, type: 3}
+  m_Script: {fileID: 11500000, guid: 779e8cdd23544804f8926876f66940c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  jumpSpeed: 12
-  gravity: 20
 --- !u!61 &1995812415
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -462,7 +487,7 @@ Rigidbody2D:
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_FixedAngle: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -500,4 +525,4 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
